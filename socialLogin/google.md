@@ -18,7 +18,7 @@
 2. OAuth 클라이언트 ID 생성 > 웹 애플리케이션 > 승인된 리디렉션 URI에 `{도메인}/login/oauth2/code/google` 추가 > 생성
 ```
 
-**3.[application-oauth]()와 [.gitignore]() 등록**
+**3.[application-oauth](./application-oauth.properties)와 [.gitignore]() 등록**
 <br>
 <br>
 
