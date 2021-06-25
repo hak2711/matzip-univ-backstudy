@@ -1,0 +1,2 @@
+#클라이언트 ID와 클라이언트 보안 비밀이 노출되지 않도록 깃허브 연동에서 제외
+application-oauth.properties
