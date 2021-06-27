@@ -28,7 +28,7 @@
 **2. 스프링 시큐리티 설정**
 
 1. build.gradle에 implementation('org.springframework.boot:spring-boot-starter-oauth2-client') 추가
-2. [시큐리티 관련 클래스 생성](./config.auth/)
+2. [시큐리티 관련 클래스 생성](./config/auth/)
 
 3. 로그인 테스트
     - 스프링 시큐리티 기본 로그인 URL : "/oauth2/authorization/google"
