@@ -7,18 +7,18 @@
 
 1. [카카오 디벨로퍼](https://developers.kakao.com/console/app)에 접속한 후 애플리케이션 추가하기
 2. 앱 이름, 회사 이름 입력 후 저장
-3. 추가한 애플리케이션 선택 > 동의항목 > 프로필 정보 설정 > 필수 동의 체크 후 동의 목적(홈페이지 소셜 로그인) 입력 후 저장
+3. 추가한 애플리케이션 선택 > 동의항목 > 프로필 정보(닉네임/프로필 사진) 설정 > 필수 동의 체크 후 동의 목적(홈페이지 소셜 로그인) 입력 후 저장
 4. 카카오 로그인 > 활성화 후 저장
 5. Redirect URI 정보 입력
 
 **2. Client Secret 발급**
 
-추가한 애플리케이션 선택 > 보안 > Client Secret 발급
+추가한 애플리케이션 선택 > 보안 > Client Secret 코드 생성
 
 **3.application-oauth.properties에 키값 등록**
 
  ```properties
-  ## KAKAO Login
+  #kakao registration
   spring.security.oauth2.client.registration.kakao.client-id=REST API 키
   spring.security.oauth2.client.registration.kakao.client-secret=클라이언트 secret
   spring.security.oauth2.client.registration.kakao.redirect-uri={baseUrl}/{action}/oauth2/code/{registrationId}
@@ -26,7 +26,8 @@
   spring.security.oauth2.client.registration.kakao.scope=profile,account_email
   spring.security.oauth2.client.registration.kakao.client-name=kakao
   spring.security.oauth2.client.registration.kakao.client-authentication-method=POST
-  ## kAKAO Provider
+  
+  #kakao provider
   spring.security.oauth2.client.provider.kakao.authorization-uri= https://kauth.kakao.com/oauth/authorize
   spring.security.oauth2.client.provider.kakao.token-uri=https://kauth.kakao.com/oauth/token
   spring.security.oauth2.client.provider.kakao.user-info-uri=https://kapi.kakao.com/v2/user/me
