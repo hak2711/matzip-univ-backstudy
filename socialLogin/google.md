@@ -16,7 +16,16 @@
 
 2. OAuth 클라이언트 ID 생성 > 웹 애플리케이션 > 승인된 리디렉션 URI에 `{도메인}/login/oauth2/code/google` 추가 > 생성
 
-**3.[application-oauth](./application-oauth.properties)와 [.gitignore](./.gitignore) 등록**
+**3.application-oauth.properties에 키값 등록**
+
+ ```properties
+    spring.security.oauth2.client.registration.google.client-id=클라이언트ID
+    spring.security.oauth2.client.registration.google.client-secret=클라이언트 보안 비밀
+    spring.security.oauth2.client.registration.google.scope=profile,email
+```
+
+**4. .gitignore에 `application-oauth.properties` 등록**
+
 <br>
 <br>
 
