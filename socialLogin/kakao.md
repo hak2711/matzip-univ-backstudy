@@ -7,7 +7,10 @@
 
 1. [카카오 디벨로퍼](https://developers.kakao.com/console/app)에 접속한 후 애플리케이션 추가하기
 2. 앱 이름, 회사 이름 입력 후 저장
-3. 추가한 애플리케이션 선택 > 동의항목 > 프로필 정보(닉네임/프로필 사진) 설정 > 필수 동의 체크 후 동의 목적(홈페이지 소셜 로그인) 입력 후 저장
+3. 추가한 애플리케이션 선택 > 동의항목 > 개인정보 동의 여부 설정 후 저장
+
+    ![image](https://user-images.githubusercontent.com/67725652/123586705-15ba0e00-d820-11eb-9075-aa92232e42cb.png)
+
 4. 카카오 로그인 > 활성화 후 저장
 5. Redirect URI 정보 입력
 
@@ -23,7 +26,7 @@
   spring.security.oauth2.client.registration.kakao.client-secret=클라이언트 secret
   spring.security.oauth2.client.registration.kakao.redirect-uri={baseUrl}/{action}/oauth2/code/{registrationId}
   spring.security.oauth2.client.registration.kakao.authorization-grant-type=authorization_code
-  spring.security.oauth2.client.registration.kakao.scope=profile,account_email
+  spring.security.oauth2.client.registration.kakao.scope=profile_nickname,profile_image,account_email #동의항목으로 추가한 것들
   spring.security.oauth2.client.registration.kakao.client-name=kakao
   spring.security.oauth2.client.registration.kakao.client-authentication-method=POST
   
